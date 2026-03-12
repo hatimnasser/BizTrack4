@@ -37,10 +37,6 @@ jobs:
       # Copy PWA files into dist before deploying
       - name: Copy PWA and Cloudflare Pages files
         run: |
-          cp manifest.json dist/manifest.json
-          cp sw.js dist/sw.js
-          cp _headers dist/_headers
-          cp _redirects dist/_redirects
           # Copy icons if they exist
           if [ -d icons ]; then
             cp -r icons dist/icons
