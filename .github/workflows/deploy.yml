@@ -35,12 +35,7 @@ jobs:
           NODE_ENV: production
 
       # Copy PWA files into dist before deploying
-      - name: Copy PWA and Cloudflare Pages files
-        run: |
-          # Copy icons if they exist
-          if [ -d icons ]; then
-            cp -r icons dist/icons
-          fi
+      
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
