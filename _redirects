@@ -1,0 +1,8 @@
+# Cloudflare Pages — Redirects
+# BizTrack Pro SPA — route all paths to index.html for client-side routing
+
+# Force HTTPS (Cloudflare handles this but adding as explicit rule)
+http://biztrackpro.pages.dev/* https://biztrackpro.pages.dev/:splat 301
+
+# SPA fallback — must be last rule
+/*    /index.html   200
